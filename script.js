@@ -20,22 +20,3 @@ function changeIcon() {
     menu.style.display = "none"
   }
 }
-
-//esse evento vai verificar em qual pagina estamos e desablitar e deixar destacado o link da pagina atual
-window.addEventListener("load", () => {
-  const links = document.querySelectorAll("a")
-  const currentPath = window.location.pathname.split("/").pop()
-
-  localStorage.setItem("activePage", currentPath)
-
-  links.forEach((link) => {
-    if (
-      link.getAttribute("href").includes(localStorage.getItem("activePage"))
-    ) {
-      link.classList.add("active")
-      link.addEventListener("click", function (event) {
-        event.preventDefault()
-      })
-    }
-  })
-})
