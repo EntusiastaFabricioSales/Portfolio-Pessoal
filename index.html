@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="rodape">
+        <div id="switch" onclick="toggleMode()">
+          <span>
+            <button></button>
+          </span>
+        </div>
+
+        <nav class="desktop">
+          <ul>
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="Pages/Person.html">Sobre Mim</a>
+            </li>
+            <li>
+              <a href="Pages/Formation.html">Formações</a>
+            </li>
+            <li>
+              <a href="Pages/Portfolio.html">Portfólio</a>
+            </li>
+            <li>
+              <a href="Pages/Contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="mobile right">
+          <div id="botao-menu-mobile" onclick="changeIcon()">
+            <ion-icon id="menu-icon" name="menu-outline"></ion-icon>
+          </div>
+          <ul id="menu-mobile" style="display: none">
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="Pages/Person.html">Sobre Mim</a>
+            </li>
+            <li>
+              <a href="Pages/Formation.html">Formações</a>
+            </li>
+            <li>
+              <a href="Pages/Portfolio.html">Portfólio</a>
+            </li>
+            <li>
+              <a href="Pages/Contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="container">
+      <h1>Inicio</h1>
+      <div id="profile">
+        <div>
+          <h1>Fabricio De Oliveira Sales</h1>
+          <p>
+            Olá, me chamo Fabricio e sou um estudante de Engenharia de software
+            e entusiasta da tecnologia, esse é um breve e simples site onde
+            mostro um pouco sobre minha pessoa e ponho em prática os meus
+            conhecimentos até aqui.
+          </p>
+        </div>
+        <div>
+          <img src="assets/perfil.png" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="social-links">
+        <a href="https://www.instagram.com/f.sal3s/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="https://www.facebook.com/fabricio.sales.3785/?locale=pt_BR"
+          target="_blank"
+        >
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/fabricio-sales-892253272/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://github.com/EntusiastaFabricioSales" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </div>
+      Feito Por Fabricio Sales
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

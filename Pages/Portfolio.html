@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="rodape">
+        <div id="switch" onclick="toggleMode()">
+          <span>
+            <button></button>
+          </span>
+        </div>
+
+        <nav class="desktop">
+          <ul>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="Person.html">Sobre Mim</a>
+            </li>
+            <li>
+              <a href="Formation.html">Formações</a>
+            </li>
+            <li>
+              <a href="Portfolio.html">Portfólio</a>
+            </li>
+            <li>
+              <a href="Contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="mobile right">
+          <div id="botao-menu-mobile" onclick="changeIcon()">
+            <ion-icon id="menu-icon" name="menu-outline"></ion-icon>
+          </div>
+          <ul id="menu-mobile">
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="Person.html">Sobre Mim</a>
+            </li>
+            <li>
+              <a href="Formation.html">Formações</a>
+            </li>
+            <li>
+              <a href="Portfolio.html">Portfólio</a>
+            </li>
+            <li>
+              <a href="Contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="container">
+      <h1>Portfólio</h1>
+
+      <ul>
+        <li>
+          <a
+            href="https://github.com/EntusiastaFabricioSales/picpaysimplificado"
+            target="_blank"
+          >
+            Authentication API</a
+          >
+          <p>
+            Esse projeto é uma API construída usando Java, Java Spring, H2 como
+            banco de dados. Essa API PicPay Backend Challenge é baseada em um
+            desafio do PicPay using Java Spring.
+          </p>
+        </li>
+
+        <li>
+          <a
+            href="https://github.com/EntusiastaFabricioSales/email-service"
+            target="_blank"
+          >
+            Email Sender</a
+          >
+          <p>
+            Esse Projeto é uma API de disparador de emails feita usando Java,
+            Java Spring, Aws Simple Email Service.
+          </p>
+        </li>
+
+        <li>
+          <a
+            href="https://github.com/EntusiastaFabricioSales/MateriaisParaConstrucao"
+            target="_blank"
+          >
+            Sistema Para Loja De Material de construção</a
+          >
+          <p>
+            Esse Projeto é um sistema criado para lojas de materias de
+            construção usando Visual studio, C#, SqlServer, a partir das aulas
+            do curso de Desenvolvimento de sistemas que eu realizei.
+          </p>
+        </li>
+      </ul>
+
+      <footer></footer>
+    </div>
+
+    <footer>Feito Por Fabricio Sales</footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

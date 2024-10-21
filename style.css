@@ -1,0 +1,326 @@
+/*zera a margem e o espaçamento de todos os elementos da pagina e faz com que os preenchimentos dos objetos sejam ate o fim da borda*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --decoration: none;
+  --text-color: white; /*variavel de cor para os textos*/
+  --bg-url: url(./assets/bg-desktop.jpg); /*variavel de cor para o fundo do site*/
+  --stroke-color: rgba(
+    255,
+    255,
+    255,
+    1
+  ); /*variavel de cor para a borda de alguns objetos*/
+  --surface-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /*variavel de cor para o fundo de alguns objetos*/
+  --surface-color-hover: rgba(
+    255,
+    255,
+    255,
+    0.02
+  ); /*variavel de cor para os objetos quando passarmos com o mouse*/
+  --highlight-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /*variavel de cor para o fundo dos links das redes sociais*/
+  --iconbutton-img: url(./assets/moon-stars.svg); /*variavel de icone para o switch*/
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 1);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --iconbutton-img: url(./assets/sun.svg);
+}
+
+.right {
+  float: right;
+}
+
+body {
+  background-image: var(--bg-url);
+  height: 100vp;
+  background-repeat: no-repeat; /*faz com que a imagem de fundo não tenha o valor default e não tenha repetição*/
+  background-position: top center; /*faz com que a imagem de fundo centralize no topo e meio da tela*/
+  background-size: cover; /*cobre todo o espaço visivel*/
+}
+
+/*muda a fonte e a cor de uma forma geral da pagina*/
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#rodape {
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/*# = seletor de id*/
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 24px auto 0px; /*primeiro define em cima, depois os lados e por ultimo baixo*/
+}
+
+#container h1 {
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+#profile {
+  padding: 32px;
+  display: flex;
+  text-align: justify; /*alinha todos os objetos filhos no centro*/
+  align-items: center;
+}
+
+#profile div {
+  display: flex;
+  flex-direction: column;
+  margin: auto 8px;
+}
+
+#profile img {
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--stroke-color);
+}
+
+#switch {
+  margin: auto 16px;
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  left: 0;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--iconbutton-img) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-out 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+.light #switch button {
+  animation: slide-in 0.3s forwards;
+}
+
+#switch span {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*links*/
+ul {
+  list-style: disc;
+
+  display: flex;
+  flex-direction: row; /*força para que os elementos da lista fiquem lado a lado*/
+  gap: 16px; /*define o espaçamento entre os itens da lista*/
+
+  padding: 24px 16px;
+}
+
+#container ul {
+  flex-direction: column; /*força para que os elementos da lista fiquem em baixo um do outro*/
+}
+
+ul li a {
+  display: flex;
+  padding: 8px 16px;
+  text-decoration: var(
+    --decoration
+  ); /*tira ou coloca a linha debaixo do texto*/
+  font-weight: 500; /*Define o tamanho da fonte*/
+
+  transition: background 0.25s; /*faz o efeito de transição do fundo do item*/
+}
+
+/*pseudo-selector: ocorre quando passamos o mouse em cima do item*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  --decoration: underline;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.25s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 24px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+input[type="text"] {
+  margin: 8px auto;
+  width: 100%;
+  height: 40px;
+  padding-left: 8px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px; /*define o valor do arredondamento da borda*/
+
+  /*define o valor do borrão do item*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+input[type="submit"] {
+  position: relative;
+  width: 80px;
+  left: 45%;
+  height: 40px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px; /*define o valor do arredondamento da borda*/
+
+  /*define o valor do borrão do item*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  cursor: pointer;
+}
+
+textarea {
+  margin: 8px 0;
+  width: 100%;
+  height: 120px;
+  padding-left: 8px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px; /*define o valor do arredondamento da borda*/
+
+  /*define o valor do borrão do item*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  resize: vertical;
+  min-height: 30px;
+  width: 100%;
+}
+
+a.active {
+  pointer-events: none;
+  cursor: default;
+  --decoration: underline;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --bg-url: url("./assets/bg-mobile.jpg");
+  }
+
+  .light {
+    --bg-url: url("./assets/bg-mobile-light.jpg");
+  }
+
+  .desktop {
+    display: none;
+  }
+  /* a partir daqui fazemos a configuração do menu se estivermos no mobile*/
+  nav.mobile {
+    display: block;
+  }
+
+  #botao-menu-mobile {
+    display: flex;
+    justify-content: center;
+
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+
+  nav.mobile ul {
+    list-style: none;
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    right: 0;
+    top: 25px;
+    position: absolute;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0;
+  }
+}
