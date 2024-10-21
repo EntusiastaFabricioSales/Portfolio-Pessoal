@@ -1,8 +1,4 @@
-<h1 align="center"> Linktree </h1>
-
-<p align="center">
-Meu primeiro projeto desenvolvido para WEB.
-</p>
+<h1 align="center"> Portfolio Pessoal </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -15,7 +11,7 @@ Meu primeiro projeto desenvolvido para WEB.
 </p>
 
 <p align="center">
-  <img alt="projeto Linktree" src="./github/preview.png" width="100%">
+  <img alt="Projeto Portfolio-Pessoal" src="./github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -24,11 +20,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - JavaScript
-- Git e Github
 
 ## 💻 Projeto
 
-O Linktree é um agregador de links para usar como cartão de visitas online.
+Esse projeto é um portfolio pessoal criado a partir das aulas da disciplina Aplicações Web e Móveis do curso de engenharia de software
 
 - [Acesse o projeto finalizado, online](https://EntusiastaFabricioSales.github.io/Portfolio-Pessoal)
 
