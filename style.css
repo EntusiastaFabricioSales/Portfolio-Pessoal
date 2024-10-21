@@ -258,11 +258,6 @@ textarea {
   width: 100%;
 }
 
-a.active {
-  pointer-events: none;
-  cursor: default;
-  --decoration: underline;
-}
 
 .mobile {
   display: none;
